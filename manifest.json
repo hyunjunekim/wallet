@@ -1,0 +1,20 @@
+{
+    "name": "Wallet",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description": "Wallet for tron",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_title": "Inject!"
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs"
+    ]
+}
