@@ -5,12 +5,21 @@
     "description": "Wallet for tron",
     "background": {
         "scripts": [
-            "background.js"
+            "dist/backgroundScript.js"
         ],
         "persistent": true
     },
     "browser_action": {
-        "default_title": "Inject!"
+        "default_popup": "app/popup/index.html",
+        "default_title": "Wallet"
+    },
+    "externally_connectable": {
+        "ids": [
+            "*"
+        ],
+        "matches": [
+            "http://localhost:3000/*"
+        ]
     },
     "permissions": [
         "https://*/*",
