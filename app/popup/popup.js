@@ -20,7 +20,7 @@ function changeStatus(stat) {
     INIT.style.display = 'block';
   } else if (stat == state.LOGIN) {
     LOGIN.style.display = 'block';
-  } else if (state == state.MAIN) {
+  } else if (stat == state.MAIN) {
     MAIN.style.display = 'block';
   }
 }

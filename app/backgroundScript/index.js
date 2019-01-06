@@ -45,7 +45,6 @@ var server = new Server(function(msg) {
 
     password.get(
       function(result) {
-        console.log(result.walletpassword);
         var valid = false;
         if (result.walletpassword == message.password) {
           valid = true;
@@ -59,7 +58,6 @@ var server = new Server(function(msg) {
       }
     );
   } else if (type == 'state') {
-
     // Process the Status.
     for (var i = 0; i < ports.length; i++) {
       ports[i].postMessage({message : {type:"state", result: state.state} });
