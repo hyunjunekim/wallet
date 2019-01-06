@@ -6,15 +6,24 @@
       height:600px;
       padding: 0px;
       margin: 0px;
-      background: url('background.jpg');
     }
-    #InitWindow {
-      height: 90%;
+    #initWindow {
+      height: 100%;
       display: flex;
       flex: 1 1;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      background: url('background.jpg');
+    }
+    #loginWindow {
+      height: 100%;
+      display: flex;
+      flex: 1 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: url('background.jpg');
     }
     .windowHeader {
       text-align: center;
@@ -50,32 +59,45 @@
   </style>
 </head>
 <body id="root">
-  <div>
-    <!-- Init page to create user -->
+  <!-- Init page to create user -->
+  <div id="INIT">
     <div id="initWindow">
        <div class="windowHeader">TronWallet</div>
        <div class="modal">
          <div class="customInput">
-           <input id="initPassword" type="password" placeholder="Password" value>
+           <input id="initPassword" type="password" placeholder="Password" value></input>
          </div>
          <div class="customInput">
-           <input id="initRepeatPassword" type="password" placeholder="Repeat Password" value>
+           <input id="initRepeatPassword" type="password" placeholder="Repeat Password" value></input>
          </div>
          <button class="customButton" id="continueInitButton">
            <span>Continue</span>
          </button>
-         <div class="errorMessage"></>
+         <div class="errorMessage" id="initError"></div>
        </div>
     </div>
   </div>
 
   <!-- Login page -->
-
-  <!-- Wallet page to control wallets -->
-  <div>
-    <div id="walletWindow">
+  <div id="LOGIN">
+    <div id="loginWindow">
+      <div class="windowHeader">TronWallet</div>
+      <div class="modal">
+        <div class="customInput">
+           <input id="loginPassword" type="password" placeholder="Password" value></input>
+        </div>
+        <button class="customButton" id="continueLoginButton">
+           <span>Continue</span>
+        </button>
+        <div class="errorMessage" id="loginError"></div>
+      </div>
     </div>
   </div>
+
+  <!-- MAIN page to control wallets -->
+  <div id="MAIN">
+  </div>
+
 </body>
 <script type="module" src="../lib/message.js"></script>
 <script type="module" src="popup.js"></script>

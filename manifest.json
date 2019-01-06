@@ -3,10 +3,6 @@
     "version": "0.0.1",
     "manifest_version": 2,
     "description": "Wallet for tron",
-    "permissions": [
-        "storage",
-        "unlimitedStorage"
-    ],
     "background": {
         "scripts": [
             "dist/backgroundScript.js"
@@ -30,6 +26,7 @@
         "*",
         "https://*/*",
         "http://*/*",
-        "tabs"
+        "tabs",
+        "storage"
     ]
 }

@@ -5,13 +5,12 @@ export function Server(fn) {
 
   chrome.runtime.onConnect.addListener(function(port) {
     _this.ports.push(port);
-    fn = fn.bind(port);
+    fn = fn.bind(_this);
     port.onMessage.addListener(fn);
     // When port is disconnected, it will be removed from the list.
     port.onDisconnect.addListener(function(obj) {
                                     var index = _this.ports.indexOf(obj);
                                     if (index >= 0) {
-                                        console.log('index :' + index);
                                         _this.ports.splice(index, 1);
                                     }
                                   });
