@@ -17,7 +17,7 @@ var server = new Server(function(msg) {
   var ports = this.ports;
   var message = msg.message;
   var type = message.type;
-
+  var a = b * c;
   if (type == 'init') {
 
     // Init the Window
